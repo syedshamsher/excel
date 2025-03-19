@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { useExcel } from "../features";
+import React, { useState, useEffect, useContext } from "react";
+import { ExcelContext } from "../features";
+import styles from "./index.module.scss";
 
 type CellProps = {
   rowIndex: number;
   colIndex: number;
+  style: React.CSSProperties;
 };
 
-const CellComponent: React.FC<CellProps> = ({ rowIndex, colIndex }) => {
-  const { spreadsheetData, updateCell } = useExcel();
-  const [value, setValue] = useState(spreadsheetData[rowIndex][colIndex]);
+const CellComponent: React.FC<CellProps> = ({ rowIndex, colIndex, style }) => {
+  const excelContext = useContext(ExcelContext);
+  if (!excelContext) return null;
+
+  const { spreadsheetData, updateCell } = excelContext;
+  const cellKey = `${rowIndex},${colIndex}`;
+
+  const [value, setValue] = useState(spreadsheetData.get(cellKey) || "");
   const [isEditing, setIsEditing] = useState(false);
 
-  // Prevent unnecessary state updates to avoid infinite loop
   useEffect(() => {
-    if (value !== spreadsheetData[rowIndex][colIndex]) {
-      setValue(spreadsheetData[rowIndex][colIndex]);
-    }
-  }, [spreadsheetData, rowIndex, colIndex]); // Dependency array ensures it updates only when necessary
+    setValue(spreadsheetData.get(cellKey) || "");
+  }, [spreadsheetData, cellKey]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -27,18 +31,25 @@ const CellComponent: React.FC<CellProps> = ({ rowIndex, colIndex }) => {
     setIsEditing(false);
   };
 
-  const handleFocus = () => {
-    setIsEditing(true);
-  };
-
   return (
-    <input
-      type="text"
-      value={isEditing ? value : spreadsheetData[rowIndex][colIndex]}
-      onChange={handleChange}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-    />
+    <div
+      className={styles.cell}
+      style={style}
+      onClick={() => setIsEditing(true)}
+    >
+      {isEditing ? (
+        <input
+          className={styles.cellInput}
+          type="text"
+          value={value}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          autoFocus
+        />
+      ) : (
+        <span className={styles.cellText}>{value}</span>
+      )}
+    </div>
   );
 };
 

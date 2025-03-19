@@ -1,21 +1,19 @@
-import React from 'react';
-import {CellComponent} from './Cell';
+import React from "react";
+import { CellComponent } from "./Cell";
 
 type RowProps = {
-  'data-row-key': string;
+  rowIndex: number;
+  columnCount: number;
+  style: React.CSSProperties;
 };
 
-const RowComponent: React.FC<RowProps> = ({ 'data-row-key': rowIndex }) => {
-  const rowNumber = parseInt(rowIndex, 10);
-
+const RowComponent: React.FC<RowProps> = ({ rowIndex, columnCount, style }) => {
   return (
-    <tr>
-      {Array.from({ length: 26 }).map((_, colIndex) => (
-        <td key={colIndex}>
-          <CellComponent rowIndex={rowNumber} colIndex={colIndex} />
-        </td>
+    <div style={style} className="row">
+      {Array.from({ length: columnCount }).map((_, colIndex) => (
+        <CellComponent key={colIndex} rowIndex={rowIndex} colIndex={colIndex} style={{ width: 100, height: 30 }} />
       ))}
-    </tr>
+    </div>
   );
 };
 

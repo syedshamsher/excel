@@ -1,6 +1,13 @@
 @import '../../variables';
 @import '../../mixins';
 
+.excelContainer {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  background-color: white;
+}
+
 body {
   margin: 0;
   font-family: var(--body-font);
