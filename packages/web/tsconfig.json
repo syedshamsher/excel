@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"],
+      "resources/*": ["./src/resources"],
+      "types/*": ["./src/types"],
+      "utils/*": ["./src/utils"],
+      "client/*": ["./src/client"],
+      "modules/*": ["./src/modules"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "exclude": ["node_modules", "internals", "dist"]
+}

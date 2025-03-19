@@ -1,0 +1,97 @@
+@import '../../variables';
+@import '../../mixins';
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: #fff;
+}
+
+main {
+  font-family: var(--body-font);
+  background-color: #fff;
+}
+
+.layout {
+  height: 100vh;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(51, 51, 51, 0.15);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header-title {
+      color: black;
+      margin: 16px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+.content {
+  padding: 0px 24px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  .calculator-and-summary-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 20px;
+  }
+
+  .main-title {
+    font-size: 55px;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  .sub-title {
+    font-size: 25px;
+    color: black;
+  }
+
+  @media (min-width: 1110px) {
+    width: 70%;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px $box-shadow-color;
+  background-color: $placeholder-color;
+}
+
+.action-button {
+  width: 200px;
+  @include primary-button;
+  width: fit-content;
+  height: 60px;
+  background: linear-gradient(135deg, #217346, #0d2b44);
+  color: white;
+  :hover {
+    background: linear-gradient(135deg, #217346, #0d2b44);
+  }
+}

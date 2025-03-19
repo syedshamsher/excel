@@ -1,0 +1,381 @@
+// Fonts
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap'; // Roboto Slab
+@import 'https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap'; // Red Hat Display
+@import"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"; //Poppins
+:root {
+  --theme-color: #101e60;
+  --title-color: #101e60;
+  --body-color: #080f30;
+  --grey-color: #656b75;
+  --smoke-color: #f6f5f3;
+  --smoke-color2: #fff4ef;
+  --smoke-color3: #f5f5f6;
+  --smoke-color4: #f4f4f4;
+  --smoke-color5: #f0f2f4;
+  --black-color: #080f30;
+  --gray-color: #131312;
+  --white-color: #fff;
+  --light-color: #9fa2ad;
+  --yellow-color: #ffb539;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --border-color: #e3e3e3;
+  --link-font: "Poppins",sans-serif;
+  --title-font: "Poppins",sans-serif;
+  --body-font: "Poppins",sans-serif;
+  --icon-font: "Font Awesome 5 Free";
+  --main-container: 1296px;
+  --container-gutters: 24px;
+  --section-space: 140px;
+  --section-space-mobile: 80px;
+  --section-title-space: 65px;
+  --ripple-ani-duration: 5s;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700
+}
+
+$primary-font: lato;
+$title-font: roboto slab;
+$red-hat-font: 'Red Hat Display';
+$roboto: 'Roboto';
+$font-family-lato: 'Lato', sans-serif;
+$italic-font: 'Segoe UI', italic;
+$courier-new-monospace: 'Courier New', Courier, monospace;
+$asterik-sans: 'SimSun', sans-serif;
+
+/* FONT SIZE */
+$font-size-2xs: 9px;
+$font-size-xs: 10px;
+$font-size-sm: 11px;
+$font-size-re: 12px;
+$font-size-rem: 13px;
+$font-size-md: 14px;
+$font-size-mdl: 15px;
+$font-size-lg: 16px;
+$font-size-lgr: 17px;
+$font-size-xl: 18px;
+$font-size-2xl: 20px;
+$font-size-2xlg: 21px;
+$font-size-3xl: 22px;
+$font-size-4xl: 24px;
+$font-size-4xlm: 25px;
+$font-size-4xlgr: 26px;
+$font-size-5xlsm: 28px;
+$font-size-5xls: 30px;
+$font-size-5xl: 32px;
+$font-size-5xlmd: 35px;
+$font-size-5xlg: 40px;
+$font-size-5xlgr: 50px;
+$font-size-6xl: 54px;
+$font-size-7xl: 56px;
+$font-size-7xlgr: 64px;
+$font-size-8xl: 70px;
+$font-size-9xl: 80px;
+$font-size-10xl: 100px;
+
+$font-size-06rem: 0.6rem;
+$font-size-08rem: 0.88rem;
+$font-size-09rem: 0.9rem;
+$font-size-10rem: 1rem;
+$font-size-12rem: 1.2rem;
+$font-size-13rem: 1.3rem;
+$font-size-14rem: 1.4rem;
+
+/* LINE HEIGHT */
+$line-height-null: 0;
+$line-height-2xs: 9px;
+$line-height-10px: 10px;
+$line-height-xs: 12px;
+$line-height-sm: 14px;
+$line-height-re: 15px;
+$line-height-relg: 16px;
+$line-height-md: 17px;
+$line-height-mdgr: 18px; // 1pt
+$line-height-lg: 19px;
+$line-height-xl: 22px;
+$line-height-2xl: 24px; // 1.5pt
+$line-height-3xl: 25px;
+$line-height-4xl: 26px;
+$line-height-4xlm: 29px;
+$line-height-5xl: 32px;
+$line-height-6xl: 38px;
+$line-height-7xl: 50px;
+$line-height-8xl: 53px;
+$line-height-9xl: 56px;
+$line-height-10xl: 67px;
+$line-height-10xlgr: 86px;
+$line-height-11xl: 106px;
+
+$line-height-08rem: 0.8rem;
+
+$line-height-1pt: 1;
+$line-height-default: 1.5;
+$line-height-2pt: 2;
+
+/* FONT WEIGHT */
+$font-weight-xs: 100;
+$font-weight-sm: 200;
+$font-weight-re: 300;
+$font-weight-md: 400; // normal
+$font-weight-lg: 500;
+$font-weight-xl: 600;
+$font-weight-2xl: 700; // bold
+$font-weight-3xl: 800;
+$font-weight-4xl: 900;
+$font-weight-5xl: 1000;
+$font-weight-6xl: 1200;
+
+/* CONSTANTS */
+$letter-spacing: 0.01em;
+$left-overviewcomponent-padding-left: 20px;
+$dashboard-title-left-margin: 40px;
+$header-height: 50px;
+$footer-height: 40px;
+$sider-flex: 0 0 20vw;
+
+/* Screen Size */
+$small-screen: 320px;
+$medium-screen: 768px;
+$max-mobile-width: 786px;
+$max-tablet-width: 1024px;
+$max-laptop-lg-width: 1365px;
+/*
+    #-# COLORS #-#
+*/
+
+/* Black */
+$black: #000;
+$slight-black-color: #202020;
+$app-black-color: #333;
+$header-text-color: rgb(0 0 0 / 85%);
+$table-box-shadow-color: #2020202e;
+$slight-gray-color: #0000001a;
+$slight-black-border-color: #00000040;
+$border-shadow-color: #3333;
+$light-black-background-color: rgb(10 9 9 / 50%);
+$black-shadow-color: #00000029;
+$box-separator-black-color: #00000012;
+$box-shadow-color: rgb(0 0 0 / 20%);
+$light-box-shadow-color: rgb(51 51 51 / 20%);
+$lighter-box-shadow-color: rgba(51, 51, 51, 0.15);
+$black-border-color: #00000026; // vesting-temp
+$scrollbar-shadow-black-color: #0000000d;
+
+/* Grey */
+$darkgray-color: darkgray;
+$grid-sub-title-color: #4f4f4f;
+$banner-text-color: #4f4f51;
+$sent-datetime-color: #505050;
+$dark-gray: #555;
+$slightly-gray-border: #6464649a;
+$slightly-gray: #666;
+$light-grey-color: #6e6e6e;
+$lighter-font-color: #707070;
+$info-gray-color: #828282;
+$grey: #808080;
+$inactive-tab-color: $info-gray-color;
+$gray: #858585;
+$secondary-color-grey: gray;
+$slider-mark-text: #919191;
+$terms-conditions-text-color: #9994a1;
+$gray-font-color: #a6a5a6;
+$placeholder-color: #bebebe;
+$light-gray-color: #c0c0c0;
+$extra-light-white: #c1c1c1;
+$slider-rail-background: #c4c4c4;
+$almost-gray: #ccc;
+$input-border-color-v2: #d0d0d0;
+$card-border-color: #d7d7d7;
+$lightgrey-color: lightgrey;
+$very-light-gray: #f2f2f2;
+$dark-gray-status-color: #454545;
+
+/* White */
+$lighter-white: #d9d9d9;
+$grid-container-border: #d9d5ec;
+$light-white: #ddd; // eap
+$grey-border-color: #dedede;
+$menu-item-background-color: #dfd8e6;
+$slight-white-border-color: #dfdfdf;
+$scroll-bar-color: #e2e2e2;
+$app-background-color: #e5e5e5;
+$inactive-grey-color: #e6e6e6;
+$border-white-color: #e9e9e9;
+$light-background: #eae1f9;
+$custom-border-color: #ececec;
+$almost-white: #eee;
+$solid-white-border-color: #f1f1f1;
+$table-background-hover-color: #f2f0f9;
+$div-border-color: #f2f2f2;
+$table-row-border-color: #f3f2f9;
+$label-background-color: #f4f0fa;
+$table-header-background-color: #f4f2ff;
+$white-hover-background: #f4f4f4; // header
+$dropdown-background-color: #f5f5f5;
+$slight-grey-background: #f6f6f6;
+$selected-menu-item-background-color: #f8f8f8;
+$message-background-color: #f9fafb;
+$thead-white: #f9edfd;
+$q-error-block-background: #fae9e6; // shared-comp
+$checkbox-hover-color: #f9eefd;
+$input-addon-color: #fafafa;
+$bit-grey-color: #fbfbff;
+$details-background-color: #fcf8ef;
+$award-description-background: #fcf8f0;
+$slight-white-color: #fdfdff;
+$table-white-color: #fffaf0;
+$white-color: #fff;
+$grid-item-background-color: rgb(255 255 255 / 80%);
+$slight-white-background-color: rgb(249 238 253 / 60%);
+$white-box-shadow-color: rgb(255 255 255 / 30%);
+$button-border-color: rgb(255 255 255 / 10%);
+$file-drop-area-background-color: rgb(255 255 255 / 5%);
+$light-background-transparent: rgb(234, 225, 249, 0.4);
+
+/* Red */
+$error-font-color: red;
+$eag-red-color: #f00; // eag
+$red-color: #d41f00; // pool
+$bright-red: #f5222d;
+$red-background-color: #ffebeb;
+$lighter-error-color: #ff4d4f; // eap
+$confirmation-icon-color: #e07474;
+$slight-pink: #e763f8;
+$tertiary-color: #ed6e79;
+$light-pink: #d66ebe;
+$tooltip-error-font-color: #f44336;
+$lighter-red-color: rgb(180 51 51);
+$mandatory-icon-color: #ff4d4f;
+$cert-upload-background: #ff5151;
+$tooltip-error-background-color: #fcdbe4;
+$light-red-background-color: #e0747426;
+$shares-sold-background: #f9e3e3;
+// #([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})|rgb|rgba|hsl
+$light-pink: #eff2f5;
+$very-light-pink: #ffefe6;
+$very-light-red: #ffe9e6;
+
+/* Green */
+$green: green;
+$green-color: #1ab84f;
+$darker-green-color: #008c30;
+$pool-green-color: #0f8f10; // pool
+$app-green-color: #65cc88;
+$check-circle-color: #52c41a;
+$icon-green-color: #68ba50;
+$share-green: #7ae096;
+$chip-green-color: #e7f4e7;
+$chip-yellow-color: #ffb100;
+$preferential-share-class-color: #71df96;
+$very-light-green: #dcffe8;
+$lightgreen: lightgreen;
+$green-transparent-color: #1ab84f26;
+$dark-green-status-color: #225d22;
+$light-green: #ecf9ec;
+
+/* Yellow */
+$orange-color: orange;
+$light-orange: #f0a16d;
+$eag-orange-color: #f0a720; // eag
+$warrant-share-class-color: #f5a26e;
+$lightish-secondary-color: #f9cd5e;
+$chart-background-color: #fce7b7;
+$mild-orange-color: #fdf7e9;
+$tertiary-color-light: #fdf8ee;
+$tab-tooltip-background: #ffa500;
+$warning-color: #ff863a; // $darker-heading-background-color replaced
+$darker-heading-background-color: #ff863a;
+$secondary-color: #ffce5e;
+$font-fourth: yellow;
+$slight-yellow-color: #f0dc6c;
+$light-yellow-border-color: #eddfc4;
+$lighter-secondary-color: #efd599;
+$stakeholder-background-color: #faefd8;
+$investor-card-bg-color: #fff8e5;
+$light-yellow-color: #ffffe0;
+$light-yellow: #fff7e6;
+$slight-yellow-background-color: rgb(255 206 94 / 65%);
+$warning-banner-border-color: #ffe58f;
+$dark-yellow-status-color: #664700;
+$orange-status-color: #b14502;
+
+/* Blue */
+$dark-blue-color: darkblue;
+$blue: blue;
+$message-title-color: #1c273a;
+$ESOP-share-class-color: #59d0e4;
+$common-share-class-color: #658de5;
+$plans-blue-color: #008eb2;
+$ice-blue-banner-color: #def;
+$message-read-background-color: rgb(242 246 249 / 80%);
+$blue-status-color: #384757;
+$light-blue: #f1ecf8;
+
+/* Violet */
+$darker-primary-color: #6549a5;
+$primary-color-purple: purple;
+$message-loading-color: #7500a5;
+$svg-path-color: #9122c2;
+$primary-color: #633ea5;
+$primary-color-hover: #8a5bdc;
+$light-primary-color: #8160b3; // $active-button-color replace
+$primary-color-light: #ae9bcf;
+$lightish-primary-color: #b19fd2;
+$total-raised-bg-color: #ebe8fe;
+$light-purple-color: #f4f0fa;
+$light-purple-border-color: #d6cde7;
+$message-hover-color: #7600a513;
+$purple-box-shadow-color: rgb(99 62 165 / 20%);
+$lighter-purple-box-shadow-color: rgb(113 59 219 / 10%);
+$lighter-black-background-color: rgba(51, 51, 51, 0.2);
+
+/* LOGOS */
+$linkedin-blue: #0e76a8;
+$google-orange: #fbbb00;
+$google-blue: #518ef8;
+$google-green: #28b446;
+$google-red: #f14336;
+
+// to add
+$primary-banner-background-color: #f1ebfb;
+$widget-header-title-color: #393938;
+
+// to replace
+$card-header-border-color: #d9d9d9;
+
+/* STYLE VARIABLES */
+$secondary-shadow: 0 0 4px $box-shadow-color;
+$card-shadow: 0 0 6px $light-box-shadow-color;
+$card-secondary-box-shadow: 0px 0px 4px 0px $lighter-box-shadow-color;
+$primary-shadow: 0 0 8px $light-box-shadow-color;
+$tertiary-shadow: 0 0 6px $light-box-shadow-color;
+$footer-shadow: 0 -2px 2px $box-shadow-color;
+$modal-footer-shadow: 0 -2px 2px $box-shadow-color;
+$modal-footer-shadow: 0 -2px 2px $box-shadow-color;
+$item-footer-shadow: 0 0 6px $lighter-black-background-color;
+
+/* DEFAULT VARIABLES */
+$size: $font-size-md;
+$weight: $font-weight-md;
+$lineheight: $line-height-default;
+$color: $app-black-color;
+$family: $primary-font;
+$style: normal;
+$bgcolor: $app-black-color;
+
+$border-bottom-width: 0px;
+$border-color: rgba(0, 0, 0, 0);
+$border-left-width: 0px;
+$border-right-width: 0px;
+$border-style: solid;
+$border-top-width: 0px;
+$background-color: rgb(39, 75, 241);
+$border-radius: 8px;
+$box-shadow: rgba(0, 0, 0, 0.184) 0px 0.706592px 0.706592px -0.625px,
+  rgba(0, 0, 0, 0.18) 0px 1.80656px 1.80656px -1.25px, rgba(0, 0, 0, 0.173) 0px 3.62176px 3.62176px -1.875px,
+  rgba(0, 0, 0, 0.16) 0px 6.8656px 6.8656px -2.5px, rgba(0, 0, 0, 0.13) 0px 13.6468px 13.6468px -3.125px,
+  rgba(0, 0, 0, 0.063) 0px 30px 30px -3.75px;
+$opacity: 1;
+$transform: none;

@@ -1,0 +1,100 @@
+@import '../../variables';
+@import '../../mixins';
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: #fff;
+}
+
+main {
+  font-family: var(--body-font);
+  background-color: #fff;
+}
+
+.layout {
+  background-color: #fff;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(51, 51, 51, 0.15);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.header-title {
+  color: white;
+  margin: 16px;
+  text-align: center;
+  @include font();
+}
+
+.content {
+  padding: 0px 24px;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 100%;
+
+  .calculator-and-summary-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 1110px) {
+    width: 70%;
+  }
+}
+
+.previous-button {
+  background-color: #f2f4f6;
+  border: none;
+  margin-right: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px $box-shadow-color;
+  background-color: $placeholder-color;
+}
+
+.progress-bar {
+  margin-top: -11px;
+  margin-bottom: 20px;
+
+  :global(.ant-progress-inner) {
+    height: 3px;
+  }
+}
+
+.currency-switch {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.results-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
