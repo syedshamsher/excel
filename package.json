@@ -8,7 +8,7 @@
     "start": "yarn && yarn --cwd packages/web start",
     "build-dev": "yarn && yarn --cwd packages/web build-dev",
     "build-extdev": "yarn && yarn --cwd packages/web build-extdev",
-    "build": "yarn && yarn --cwd packages/web build",
+    "build": "nvm use 21.7.3 && yarn && yarn --cwd packages/web build",
     "rimraf": "lerna clean -y && rm -rf node_modules && yarn cache clean",
     "typescript": "lerna run typescript --parallel",
     "lint": "eslint . --fix --quiet --cache",
