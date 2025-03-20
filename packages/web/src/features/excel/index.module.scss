@@ -2,106 +2,88 @@
 @import '../../mixins';
 
 .excelContainer {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.gridWrapper {
+  width: 95vw;
   height: 90vh;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: white;
 }
 
-body {
-  margin: 0;
-  font-family: var(--body-font);
-  background-color: #fff;
-}
-
-main {
-  font-family: var(--body-font);
-  background-color: #fff;
-}
-
-.layout {
-  background-color: #fff;
-}
-
-.header {
-  background-color: #fff;
-  box-shadow: 0 0 6px rgba(51, 51, 51, 0.15);
-  padding: 0;
+.headerRow {
   position: sticky;
   top: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.header-title {
+  background: #007bff;
   color: white;
-  margin: 16px;
+  font-weight: bold;
   text-align: center;
-  @include font();
 }
 
-.content {
-  padding: 0px 24px;
-  background-color: #fff;
-  margin: 0 auto;
-  width: 100%;
-
-  .calculator-and-summary-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: 20px;
-  }
-
-  @media (min-width: 1110px) {
-    width: 70%;
-  }
+.headerColumn {
+  position: sticky;
+  left: 0;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
-.previous-button {
-  background-color: #f2f4f6;
-  border: none;
-  margin-right: 20px;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px $box-shadow-color;
-  background-color: $placeholder-color;
-}
-
-.progress-bar {
-  margin-top: -11px;
-  margin-bottom: 20px;
-
-  :global(.ant-progress-inner) {
-    height: 3px;
-  }
-}
-
-.currency-switch {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.results-container {
+.cell {
   display: flex;
   align-items: center;
-  gap: 10px;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background-color: white;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
 }
+
+.cellInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cellText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+  .excelContainer {
+    background: #1e1e1e;
+  }
+  .gridWrapper {
+    background: #2d2d2d;
+    border: 2px solid #444;
+  }
+  .cell {
+    background: #333;
+    color: white;
+  }
+  .headerRow,
+  .headerColumn {
+    background: #0056b3;
+  }
+}
+
